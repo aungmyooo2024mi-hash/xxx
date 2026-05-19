@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>祝马显明生日快乐</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(120deg, #f0e8ff, #e6f4ff);
+      font-family: "微软雅黑", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      background: #ffffff;
+      padding: 60px 45px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #805ad5;
+      margin-bottom: 12px;
+    }
+
+    .age {
+      font-size: 19px;
+      color: #777;
+    }
+
+    .name {
+      font-size: 28px;
+      color: #2c3e50;
+      margin: 22px 0;
+      font-weight: 600;
+    }
+
+    .content {
+      font-size: 17px;
+      color: #555;
+      line-height: 2.1;
+    }
+
+    .bless {
+      margin-top: 28px;
+      font-size: 18px;
+      color: #6c5ce7;
+    }
+
+    /*轻柔飘落小点 不花哨 */
+    .dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #b8a9f0;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: slowFall 7s linear infinite;
+    }
+
+    @keyframes slowFall {
+      0% {
+        top: -10px;
+      }
+
+      100% {
+        top: 100vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>🎂 生日快乐 🎂</h1>
+    <div class="age">十七周岁少年</div>
+    <div class="name">弟弟 马显明</div>
+    <div class="content">
+      岁岁年年，平安喜乐<br>
+      向阳生长，未来可期<br>
+      无忧无虑，万事称心
+    </div>
+    <div class="bless">平平皆顺畅，岁岁皆安康</div>
+  </div>
+
+  <audio autoplay loop hidden>
+    <source src="https://www.soundjay.com/misc/birthday-song-1.mp3">
+
+
+    <script>
+      function createDot() {
+        let d = document.createElement('div');
+        d.className = 'dot';
+        d.style.left = Math.random() * 100 + '%';
+        d.style.animationDuration = Math.random() * 4 + 5 + 's';
+        document.body.appendChild(d);
+        setTimeout(() => d.remove(), 12000)
+      }
+      setInterval(createDot, 300)
+    </script>
+</body>
+
+</html>
